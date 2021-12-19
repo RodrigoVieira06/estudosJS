@@ -11,10 +11,23 @@
 <body>
     <h1>Aula 7 - Funções</h1>
     <h3>Abrir o console para conferir dados inseridos no Script</h3>
-
+    Um padrão de nomenclatura para uma função é um Verbo + Substantivo em camelcase<br />
+    Por exemplo:<br />
+    <b>function</b> resetaCor()<br />
+    <b>function</b> alterarTamanho()<br />
+    E etc...<br />
+    <br />
     <strong>Código:</strong>
     <br />
-    
+    let corSite = "vermelho";<br />
+    <br />
+    function resetaCor(cor,tonalidade){<br />
+    corSite = cor + " " +tonalidade;<br />
+    };<br />
+    <br />
+    console.log(corSite);<br />
+    resetaCor("preto","claro");<br />
+    console.log(corSite);<br />
     <script src="scripts.js"></script>
 </body>
 
