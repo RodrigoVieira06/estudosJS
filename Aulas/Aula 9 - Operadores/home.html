@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts.js"></script>
+    <title>Aula 9 - Treinamento JS</title>
+</head>
+
+<body>
+    <h1>Aula 9 - Operadores</h1>
+    <h3>Abrir o console para conferir dados inseridos no Script</h3>
+    Existem os seguintes tipos de operadores em Javascript:<br />
+    Operadores Aritiméticos<br />
+    Operadores de Atribuição<br />
+    Operadores de Comparação<br />
+    Operadores Lógicos<br />
+    Operadores Bitwise<br />
+    <br />
+    <h2>Operadores Aritiméticos</h2>
+    Contém os operadores:<br />
+    +, -, *, /, **<br />
+    <br />
+    <button onclick="operadorAritimetico('somar',500,30)">Somar</button>
+    <button onclick="operadorAritimetico('subtrair',500,30)">Subtrair</button>
+    <button onclick="operadorAritimetico('multiplicar',500,3)">Multiplicar</button>
+    <button onclick="operadorAritimetico('dividir',500,50)">Dividir</button>
+    <button onclick="operadorAritimetico('exp',500,2)">Potência</button>
+    <button onclick="operadorAritimetico('incrementar',500,2)">Incrementar</button>
+    <button onclick="operadorAritimetico('decrementar',500,2)">Decrementar</button>
+
+    <h2>Operadores de Atribuição</h2>
+    Contém os operadores que atribuem valores à uma variável ou constante.:<br />
+    Exemplos:<br />
+    =, +=, -=, *=, etc<br />
+    <button onclick="operadorAtribuicao('atribuir',500)">Atribuir</button>
+    <button onclick="operadorAtribuicao('somar',500,200)">Atribuir Soma</button>
+    <button onclick="operadorAtribuicao('subtrair',500,200)">Atribuir Subtração</button>
+
+    <h2>Operadores de Igualdade</h2>
+    <h3>Igualdade estrita:</h3>
+    Compara e define valores estritamente, respeitando não somente ao dado, mas, também, o seu tipo.<br />
+    Exemplos: <br />
+    1 === 1; -> TRUE<br />
+    '1' === 1; -> FALSE (pois o primeiro é um 'string' e o segundo um 'number', e é recomendável usar desta forma)<br />
+    <h3>Igualdade Solta</h3>
+    Nesse caso a comparação e atribuição ignoram o tipo, se importando apenas com o valor.<br />
+    Exemplos:<br />
+    1 == 1; -> TRUE <br />
+    '1' == 1; -> TRUE (Não é recomendável)<br />
+    <h2>Operador Ternário</h2>
+    Operador que trabalha com condicionais.<br />
+    Exemplo:<br />
+    Em uma loja, um cliente que possui mais de 100 pontos é considerado um cliente premium.<br />
+    Abaixo, pode-se rodar o valor de 3 clientes. <br />
+    <button onclick="operadorTernario(150)">Cliente de 150 pontos</button>
+    <button onclick="operadorTernario(100)">Cliente de 100 pontos</button>
+    <button onclick="operadorTernario(50)">Cliente de 50 pontos</button>
+
+    <h2>Operadores Lógicos</h2>
+    No Javascript existem 3 tipos de operadores lógicos:<br />
+    "AND", "OR" e "NOT".<br />
+    <h3>Operador Lógico "AND"</h3>
+    Sintaxe representada com o símbolo "&&".<br />
+    Retorna TRUE se os dois operandos forem TRUE.<br />
+    Exemplos:.<br />
+    TRUE && TRUE; -> TRUE<br />
+    FALSE && TRUE -> FALSE<br />
+    <br />
+    Exemplo real:<br />
+    Para uma vaga de emprego, uma pessoa só pode se aplicar se for <b>de idade</b> E <b>possuir carteira de
+        trabalho</b>.<br />
+    Nesse caso temos dois operandos: idade (number) e possuir carteira de trabalho (boolean).<br />
+    Escolha uma das idades abaixo e verifique no console o resultado se pode aplicar ou não:<br />
+    <button onclick="operadorLogico('vagaAND',18,false)">18 anos sem carteira</button>
+    <button onclick="operadorLogico('vagaAND',25,true)">25 anos com carteira</button>
+    <button onclick="operadorLogico('vagaAND',16,true)">16 anos com carteira</button>
+    <button onclick="operadorLogico('vagaAND',22,false)">22 anos sem carteira</button>
+    <button onclick="operadorLogico('vagaAND',14,false)">14 anos sem carteira</button>
+    <h3>Operador Lógico "OR"</h3>
+    Sintaxe representada com o símbolo "||".<br />
+    Retorna TRUE se apenas um dos dois operandos forem TRUE.<br />
+    Exemplos:.<br />
+    TRUE && TRUE; -> TRUE<br />
+    FALSE && TRUE -> TRUE<br />
+    <br />
+    Exemplo real:<br />
+    Seguindo o mesmo exemplo anterior, desta vez para outra vaga de emprego, uma pessoa só pode se aplicar se for
+    <b>de idade</b> OU <b>possuir carteira de trabalho</b>.<br />
+    <button onclick="operadorLogico('vagaOR',18,false)">18 anos sem carteira</button>
+    <button onclick="operadorLogico('vagaOR',31,true)">31 anos com carteira</button>
+    <button onclick="operadorLogico('vagaOR',17,true)">17 anos com carteira</button>
+    <button onclick="operadorLogico('vagaOR',26,false)">26 anos sem carteira</button>
+    <button onclick="operadorLogico('vagaOR',13,false)">13 anos sem carteira</button>
+    <h3>Operador Lógico "NOT"</h3>
+    Sintaxe representada com o símbolo "!".<br />
+    Retorna TRUE se apenas um dos dois operandos forem TRUE.<br />
+    Exemplos:.<br />
+    let podeAplicar = true;<br />
+    candidatoRecusado = !podeAplicar; -> FALSE<br />
+    <br />
+    <h3>Comparações Não Boleanos</h3>
+    No Javascript temos 2 conceitos para boleanos, o conceito <b>Truthy</b> e <b>Falsy</b>.<br />
+    Ao realizar comparações (and e or) o Javascript observara os dados seguindo os conceitos descritos para poder
+    atribuir um valor boleano.<br />
+    <br />
+    Em Falsy podemos ter os seguintes valores:<br />
+    undefined, null, 0, false, '', NaN (not a number). <br />
+    <br />
+    Em Truthy podemos ter todos os valores que não estão listados no Falsy.<br />
+    Exemplos:<br />
+    false || 'Rodrigo'; -> Retorna: 'Rodrigo'<br />
+    null || 3; -> Retorna: 3<br />
+    NaN || 4 || 'Rodrigo'; -> Retorna: 4<br />
+    <br />
+    Exemplo real:<br />
+    Dado uma cor padrão "Azul", escolha uma das formas de personalização:<br />
+    <button onclick="coparacoesNaoBoleanos('Vermelho')">Vermelho</button>
+    <button onclick="coparacoesNaoBoleanos('Amarelo')">Amarelo</button>
+    <button onclick="coparacoesNaoBoleanos()">Sem Personalização</button>
+</body>
+
+</html>
