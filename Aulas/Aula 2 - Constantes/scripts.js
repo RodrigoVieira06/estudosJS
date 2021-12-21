@@ -1,6 +1,7 @@
-const valorInfressoAdulto = 20;
+function constantes() {
 
-console.log(valorInfressoAdulto)
+    const valorInfressoAdulto = 20;
 
-//Const deve ser usado para dados que não podem ser alterados
-//é uma boa prática que deve ser utilizada
+    console.log(valorInfressoAdulto)
+
+}

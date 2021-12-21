@@ -1,9 +1,13 @@
-let corSite = "vermelho";
+let corAtual = "vermelho";
 
-function resetaCor(cor,tonalidade){
-    corSite = cor + " " +tonalidade;
-};
 
-console.log(corSite);
-resetaCor("preto","claro");
-console.log(corSite);
+function funcoes(cor, tonalidade) {
+    console.log("Cor inicial:",corAtual);
+    mudaCor(cor, tonalidade);
+    console.log("Nova cor:",corAtual);
+}
+
+
+function mudaCor(cor, tonalidade) {
+    corAtual = cor + " " + tonalidade;
+}

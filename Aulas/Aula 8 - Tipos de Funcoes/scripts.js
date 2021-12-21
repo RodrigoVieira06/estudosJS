@@ -1,15 +1,17 @@
-//Realiza uma tarefa, mas não devolve(retorna) algum dado.
-function dizerNome(){
-    console.log('Rodrigo');
+function funcaoSemRetorno(nome) {
+    console.log("O nome é:", nome)
 }
-dizerNome();
 
-//Faz um cálculo ou operação e retorna algum dado.
-function MultiplicarPorDois(valor){
+
+function funcaoComRetorno(valor1,valor2) {
+    let resultado = MultiplicarPorDois(valor1);
+    console.log(valor1 + " * 2 =",resultado);
+
+    console.log(valor2 + " * 2 =",MultiplicarPorDois(valor2));
+}
+
+
+function MultiplicarPorDois(valor) {
 
     return valor * 2;
 }
-let resultado = MultiplicarPorDois(5);
-console.log(resultado);
-
-console.log(MultiplicarPorDois(2));
